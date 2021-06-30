@@ -1,0 +1,28 @@
+quast-5.0.2/quast.py --min-contig 1000 kmer_15/contigs.fa -r refsarcov.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-5.8.0-59-generic-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 8
+
+Started: 2021-06-29 08:45:20
+
+Logging to /home/erky/Downloads/quast_results/results_2021_06_29_08_45_20/quast.log
+NOTICE: Maximum number of threads is set to 2 (use --threads option to set it manually)
+
+CWD: /home/erky/Downloads
+Main parameters: 
+  MODE: default, threads: 2, minimum contig length: 1000, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/erky/Downloads/refsarcov.fasta ==> refsarcov
+
+Contigs:
+  Pre-processing...
+WARNING: Skipping contigs because it doesn't contain contigs >= 1000 bp.
+
+
+ERROR! None of the assembly files contains correct contigs. Please, provide different files or decrease --min-contig threshold.

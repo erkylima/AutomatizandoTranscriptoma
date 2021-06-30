@@ -1,0 +1,118 @@
+quast-5.0.2/quast.py --min-contig 15 kmer_15/contigs.fa -r refsarcov.fasta
+
+Version: 5.0.2
+
+System information:
+  OS: Linux-5.8.0-59-generic-x86_64-with-Ubuntu-20.04-focal (linux_64)
+  Python version: 2.7.18
+  CPUs number: 8
+
+Started: 2021-06-29 08:42:55
+
+Logging to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/quast.log
+NOTICE: Maximum number of threads is set to 2 (use --threads option to set it manually)
+
+CWD: /home/erky/Downloads
+Main parameters: 
+  MODE: default, threads: 2, minimum contig length: 15, minimum alignment length: 65, \
+  ambiguity: one, threshold for extensive misassembly size: 1000
+
+Reference:
+  /home/erky/Downloads/refsarcov.fasta ==> refsarcov
+
+Contigs:
+  Pre-processing...
+  kmer_15/contigs.fa ==> contigs
+
+2021-06-29 08:42:55
+Running Basic statistics processor...
+  Reference genome:
+    refsarcov.fasta, length = 64302, num fragments = 30, GC % = 37.76
+  Contig files: 
+    contigs
+  Calculating N50 and L50...
+    contigs, N50 = 29, L50 = 1219, Total length = 87505, GC % = 37.49, # N's per 100 kbp =  0.00
+  Drawing Nx plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/Nx_plot.pdf
+  Drawing NGx plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/NGx_plot.pdf
+  Drawing cumulative plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/cumulative_plot.pdf
+  Drawing GC content plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/GC_content_plot.pdf
+  Drawing contigs GC content plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/contigs_GC_content_plot.pdf
+  Drawing Coverage histogram (bin size: 1x)...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/coverage_histogram.pdf
+  Drawing contigs coverage histogram (bin size: 1x)...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/basic_stats/contigs_coverage_histogram.pdf
+Done.
+
+2021-06-29 08:42:56
+Running Contig analyzer...
+  contigs
+  Logging to files /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/contigs_report_contigs.stdout and contigs_report_contigs.stderr...
+  Aligning contigs to the reference
+  quast-5.0.2/quast_libs/minimap2/minimap2 -c -x asm5 -B5 -O4,16 --no-long-join -r \
+  85 -N 50 -s 65 -z 200 --mask-level 0.9 --min-occ 200 -g 2500 --score-N 2 --cs -t \
+  2 quast_results/results_2021_06_29_08_42_55/quast_corrected_input/refsarcov.fasta \
+  quast_results/results_2021_06_29_08_42_55/quast_corrected_input/contigs.fa > quast_results/results_2021_06_29_08_42_55/contigs_reports/minimap_output/contigs.coords_tmp \
+  2>> quast_results/results_2021_06_29_08_42_55/contigs_reports/contigs_report_contigs.stderr
+  Analysis is finished.
+
+  Creating total report...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/misassemblies_report.txt, misassemblies_report.tsv, and misassemblies_report.tex
+  Transposed version of total report...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/transposed_report_misassemblies.txt, transposed_report_misassemblies.tsv, and transposed_report_misassemblies.tex
+  Creating total report...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/unaligned_report.txt, unaligned_report.tsv, and unaligned_report.tex
+  Drawing misassemblies by types plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/misassemblies_plot.pdf
+  Drawing misassemblies FRCurve plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/contigs_reports/misassemblies_frcurve_plot.pdf
+Done.
+
+2021-06-29 08:42:57
+Running NA-NGA calculation...
+  contigs, Largest alignment = 196, NA50 = None, LA50 = None
+  Drawing cumulative plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/aligned_stats/cumulative_plot.pdf
+  Drawing NAx plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/aligned_stats/NAx_plot.pdf
+  Drawing NGAx plot...
+    saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/aligned_stats/NGAx_plot.pdf
+Done.
+
+2021-06-29 08:42:57
+Running Genome analyzer...
+  NOTICE: No file with genomic features were provided. Use the --features option if you want to specify it.
+
+  NOTICE: No file with operons were provided. Use the -O option if you want to specify it.
+  contigs
+  Analysis is finished.
+  Skipping drawing Genome fraction, % histogram... (less than 2 columns histogram makes no sense)
+Done.
+
+NOTICE: Genes are not predicted by default. Use --gene-finding or --glimmer option to enable it.
+
+2021-06-29 08:42:57
+Creating large visual summaries...
+This may take a while: press Ctrl-C to skip this step..
+  1 of 2: Creating Icarus viewers...
+  2 of 2: Creating PDF with all tables and plots...
+Done
+
+2021-06-29 08:42:58
+RESULTS:
+  Text versions of total report are saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/report.txt, report.tsv, and report.tex
+  Text versions of transposed total report are saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/transposed_report.txt, transposed_report.tsv, and transposed_report.tex
+  HTML version (interactive tables and plots) is saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/report.html
+  PDF version (tables and plots) is saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/report.pdf
+  Icarus (contig browser) is saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/icarus.html
+  Log is saved to /home/erky/Downloads/quast_results/results_2021_06_29_08_42_55/quast.log
+
+Finished: 2021-06-29 08:42:58
+Elapsed time: 0:00:02.833189
+NOTICEs: 4; WARNINGs: 0; non-fatal ERRORs: 0
+
+Thank you for using QUAST!
