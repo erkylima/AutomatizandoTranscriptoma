@@ -1,0 +1,15 @@
+[prinseq-lite-0.20.4] [06/30/2021 16:14:17] Executing PRINSEQ with command: "perl prinseq-lite.pl -fastq prova/SRR14856018_1.fastq -out_format 3 -trim_qual_right 20 -trim_qual_left 20 -trim_qual_type min -trim_qual_rule lt -trim_qual_window 10 -trim_qual_step 1 -log automaresult/SRR14856018_1.log -min_len 80 -min_qual_mean 20 -trim_left 20 -out_good automaresult/SRR14856018_1_trimmed -out_bad automaresult/SRR14856018_1_bad"
+[prinseq-lite-0.20.4] [06/30/2021 16:14:17] Parsing and processing input data: "prova/SRR14856018_1.fastq"
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Done parsing and processing input data
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Input sequences: 41,968
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Input bases: 6,332,523
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Input mean length: 150.89
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Good sequences: 41,789 (99.57%)
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Good bases: 5,432,142
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Good mean length: 129.99
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Bad sequences: 179 (0.43%)
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Bad bases: 24,060
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Bad mean length: 134.41
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] Sequences filtered by specified parameters:
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] trim_qual_left: 5
+[prinseq-lite-0.20.4] [06/30/2021 16:14:19] min_len: 174
