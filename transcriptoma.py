@@ -32,14 +32,14 @@ def trimagem(nome_arquivo):
     return "automaresult/{}_trimmed.fastq".format(nome_arquivo)
     
 def prepararMontagens():
-    os.system("sudo apt-get install libcairo2-dev")
+    os.system("sudo apt-get install -y libcairo2-dev")
     #os.system("cp -puv prinseq/prinseq-lite.pl /usr/local/bin/prinseq-lite && chmod +x /usr/local/bin/prinseq-lite")
     #os.system("cp -puv prinseq/prinseq-graphs.pl /usr/local/bin/prinseq-graphs && chmod +x /usr/local/bin/prinseq-graphs")
-    os.system("sudo apt install default-jre")
+    os.system("sudo apt install -y default-jre")
     os.system("sudo apt-get install -y bwa")
     os.system("sudo apt-get install -y samtools")
     os.system("sudo apt-get install -y valvet")
-    os.system("sudo apt-get install bcftools")
+    os.system("sudo apt-get install -y bcftools")
     
 def montagemReferencia(amostra_trimada, arq_referencia):
     nome_trimado = amostra_trimada.split('/')[1].split(".")[0]
@@ -63,8 +63,8 @@ def montagemDeNovo(nome_amostra, referencia):
 def gerarVCF(nome_amostra, referencia):
     os.system("samtools mpileup -uD -f {} automaresult/{}alinhamento_sort.bam |bcftools view -> {}variants.vcf".format(referencia, nome_amostra.split(".")[0], nome_amostra.split(".")[0]))
     
-verificarQualidadeFastq()
 prepararMontagens()
+verificarQualidadeFastq()
 amostra= input('Insira o diretório e nome do arquivo a ser trimado que está na pasta prova >\n')  
 nomedir_trimado = trimagem(amostra)
 verificarQualidadeFastq()
