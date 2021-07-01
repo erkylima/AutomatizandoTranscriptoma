@@ -31,3 +31,8 @@ Vale a pena lembrar que pode ser necessario ter uma IDE Python para executar o s
 sudo apt-get install -y eric
 
 eric --no-sandbox
+
+### Utilizando tablet
+Se você quiser fazer uma análise mais detalhada dos alinhamentos ordenados gerados pelo script você pode realizar o download do tablet e instala-lo em sua máquina linux para utilização do software no link abaixo:
+
+https://ics.hutton.ac.uk/tablet/download-tablet/
